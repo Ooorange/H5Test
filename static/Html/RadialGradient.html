@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 颈象渐变-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function draw(id) {
+            var canvas=document.getElementById(id);
+            if (canvas===null){
+                return false;
+            }
+            var context=canvas.getContext('2d');
+            var g1=context.createRadialGradient(0,300,0,0,300,100);
+            g1.addColorStop(0,'rgb(255,255,0)');
+            g1.addColorStop(0.3,'rgb(255,0,255)');
+            g1.addColorStop(0.5,'rgb(0,255,255)');
+            g1.addColorStop(1,'rgb(255,255,100)');
+            context.fillStyle=g1;
+            context.fillRect(0,0,500,500);
+        }
+    </script>
+</head>
+<body onload=draw('canvas')>
+    <canvas id='canvas' width='500' height='500'></canvas>
+</body>
+</html>
