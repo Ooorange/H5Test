@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Big Caslon", "微软雅黑 ";
+    font-size: 18px;
+    line-height: 1.8;
+}
+/*上下左右,比如说margin:20px auto,上下20px,左右自适应*/
+.div{
+    background-color: crimson;
+    width: 500px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 10px rgba(120,23,30,0.2);
+    padding: 10px 20px;
+}
+.div h3{
+    color:aliceblue;
+    font-size:20px;
+}
+/*在div节点下的所有tooltips样式*/
+.div .tooltips{
+    cursor: pointer;
+    color:chartreuse;
+}
+.tooltip-box{
+    overflow: auto;
+    display: block;
+    background: #fff;
+    line-height: 1.6;
+    border: 1px solid crimson;
+    border-radius: 5px;
+    color: coral;
+    font-size: 16px;
+    padding: 20px;
+
+}
