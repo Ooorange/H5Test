@@ -3,6 +3,9 @@
  * Created by orange on 16/5/25.
  */
 var className="tooltip-box";
+var getDocumentID=function (id) {
+    return document.getElementById(id);
+}
 function showTips(obg,id,html,widht,height) {
     if (document.getElementById(id)==null){
         var tooltips;
@@ -20,19 +23,24 @@ function showTips(obg,id,html,widht,height) {
         tooltips.style.top=top+'px';
         tooltips.style.left=left+'px';
         obg.appendChild(tooltips);
-        obg.onmouseout=function () {
+        obg.addEventListener("mouseout",function () {
             setTimeout(function () {
                 document.getElementById(id).style.display='none';
             },500);
-
-        }
+        });
+        // obg.onmouseout=function () {
+        //     setTimeout(function () {
+        //         document.getElementById(id).style.display='none';
+        //     },500);
+        //
+        // }
 
     }else {
-        document.getElementById(id).style.display='block';
+        getDocumentID(id).style.display='block';
     }
 }
 
-var weibo=document.getElementById('author');
+var weibo=getDocumentID('author');
 var authorName=document.getElementById('capture');
 
 weibo.onmousemove=function(){
